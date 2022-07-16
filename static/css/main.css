@@ -1,0 +1,16 @@
+.inner-container, .container-options {
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    padding-right: 50px;
+}
+
+.options {
+    margin-right: 10px;
+}
+.to-do-list-container {
+    display: flex;
+    justify-content: center;
+    /* padding-left: 5%;
+    padding-top: 10px; */
+}

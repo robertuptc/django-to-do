@@ -1,0 +1,25 @@
+{% extends 'pages/layout.html' %}
+{% load static %}
+
+{% block head %}
+<title> Home Page</title>
+{% endblock%}
+
+
+{% block content %}
+<div class="to-do-list-container">
+    <div>
+        <h1>Your to-do list</h1>
+        {% if database_list %}
+        {% for item in database_list %}
+        <ul>
+            <a href="{% url 'to_do:details' item.id %}">
+                <li>{{ item.title }} </li>
+            </a>
+            <!-- <li>{{ item.id }} -- {{ item.title }}  -- {{ item.description }} </li> -->
+        </ul>
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'pages/layout.html' %}
+{% load static %}
+
+{% block head %}
+<title>Add item</title>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="text-center mt-5">
+    <h1>New to do</h1>
+    <form action="{% url 'to_do:todos' %}" method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Title</label>
+            <input type="text" class="form-control-sm" id="title" name="title" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Description</label>
+            <input type="text" class="form-control-sm" id="description" name="description">
+        </div>
+        <button type="submit" class="btn btn-primary mb-1">Submit</button>
+    </form>
+</div>
+{% endblock %}

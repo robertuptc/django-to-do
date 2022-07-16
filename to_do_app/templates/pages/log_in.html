@@ -1,0 +1,24 @@
+{% extends 'pages/layout.html' %}
+
+{% block head%}
+<title>sign_in</title>
+{% endblock %}
+
+
+{% block content%}
+<!-- log_in form -->
+<div class="text-center mt-5">
+    <form>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control-sm" id="email" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control-sm" id="password">
+        </div>
+        <button type="submit" class="btn btn-primary mb-1" onclick="logIn(event)">Log In</button>
+        <div id="emailHelp" class="form-text">Don't have an account? Create one <a href="{% url 'to_do:sign_up' %}">here</a></div>
+    </form>
+</div>
+{% endblock %}
